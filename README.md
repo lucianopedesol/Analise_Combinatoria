@@ -1,6 +1,6 @@
 ﻿# Analise_Combinatoria
  
- Questão base utilizada para criar o algoritimo.
+ Questão base utilizada para criar o algoritimo:
  
  
 Uma estante de biblioteca tem 16 livros: 11 exemplares o livro "Combinatória é fácil" e 5 exemplares de "Combinatória não é difícil". Considere que os livros com mesmo título sejam indistinguíveis. Determine de quantas maneiras diferentes podemos dispor os 16 livros na estante de modo que dois exemplares de "Combinatória não é difícil" nunca estejam juntos.
