@@ -7,7 +7,7 @@ Uma estante de biblioteca tem 16 livros: 11 exemplares o livro "Combinatória é
 
 Solução:
 Colocando os 11 livros de “Combinatória é fácil” primeiramente deixando um espaço entre eles, temos: 
-_CF_CF_CF_CF_CF_CF_CF_CF_CF_CF_CF_.
+""_CF_CF_CF_CF_CF_CF_CF_CF_CF_CF_CF_""
 
 Há 12 espaços vazios onde os livros “Combinatória não é difícil” podem entrar sem ficarem juntos. O problemas se resume a escolher 5 lugares dentre os 12 disponíveis: 
 
