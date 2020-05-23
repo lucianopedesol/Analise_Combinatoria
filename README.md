@@ -1,10 +1,10 @@
 ﻿# Analise_Combinatoria
  
  
-# importing functools for reduce()
+""" importing functools for reduce()"""
 import functools
 
-# importing operator for operator functions
+"""importing operator for operator functions"""
 import operator
 
 
