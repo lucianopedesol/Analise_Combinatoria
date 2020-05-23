@@ -18,3 +18,5 @@ C(n,k) = n!/(k!(n-k)!)
 C(12, 5) = 12!/(5!(12-5)!) = 792 formas
 
 
+Codigo para solução dos calculos:
+https://github.com/lucianopedesol/Analise_Combinatoria/blob/master/estatistica.py
