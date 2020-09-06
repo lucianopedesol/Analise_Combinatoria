@@ -83,7 +83,7 @@ while continuar:
     print(f"\nC(n,k)= {n_produto}/({k_produto}*({dif_produto})) = {resultado}")
 
     print(
-        f"\n\n Existem {resultado} maneiras possiveis de se organizar esses livros")
+        f"\n\n Existem {resultado} maneiras possíveis de se organizar esses livros")
 
     novaQuestao = True
     while novaQuestao:
@@ -99,3 +99,34 @@ while continuar:
         else:
             print("\n\n***Você precisa escolher Y(sim) ou N(não)***\n\n")
             continue
+
+"""
+Retorno >>
+
+Questão (1)
+Uma estante de biblioteca tem 16 livros: 11 exemplares o livro "Combinatória é fácil" 
+e 5 exemplares de "Combinatória não é difícil". Considere que os livros com mesmo título sejam indistinguíveis. 
+Determine de quantas maneiras diferentes podemos dispor os 16 livros na estante 
+de modo que dois exemplares de "Combinatória não é difícil" nunca estejam juntos.
+
+Aguarde os valores serem gerados para calculo.
+
+
+Resolução:
+
+
+C(n,k)= (n+1)!/(k!*((n+1)-k)!
+
+C(n,k)= 12!/(5!*(12-5)!)
+
+[1* 2* 3* 4* 5* 6* 7* 8* 9* 10* 11* 12] / ([1* 2* 3* 4* 5]*[1* 2* 3* 4* 5* 6* 7])
+
+C(n,k)= 479001600/(120*(5040)) = 792.0
+
+
+Existem 792.0 maneiras possíveis de se organizar esses livros
+
+
+Deseja criar outra questão? (Y/N) 
+ 
+"""
