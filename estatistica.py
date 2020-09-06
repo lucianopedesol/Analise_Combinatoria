@@ -19,30 +19,20 @@ while continuar:
 
     print("\n\nInsira os dados abaixo:")
 
-    n = input(
-        "\n\nInsira o valor da quantidade de livros, de modelo determinado, que tem o maior volume: {qtd_livro_EF} \n"
-    )
+    n = input("\n\nInsira o valor da quantidade de livros, de modelo determinado, que tem o maior volume: {qtd_livro_EF} \n")
 
-    k = input(
-        "Insira o valor da quantidade de livros, de modelo determinado, que não pode ficar "
-        "um do lado do outro: {qtd_livro_NED}\n"
-    )
+    k = input("Insira o valor da quantidade de livros, de modelo determinado, que não pode ficar um do lado do outro: {qtd_livro_NED}\n")
 
     if not k.isnumeric() or not n.isnumeric():
-        print(
-            "\n\n***Você deve inserir números validos, não é permitido letras ou números flutuantes!***\n\n"
-        )
+        print("\n\n***Você deve inserir números validos, não é permitido letras ou números flutuantes!***\n\n")
         continue
     else:
         n = int(n)
         k = int(k)
 
         if n < k or k == 0:
-            print(
-                "\n\n***Não é possivel satisfazer o calculo, tente novamento com novos valores.***\n\n"
-            )
+            print("\n\n***Não é possivel satisfazer o calculo, tente novamento com novos valores.***\n\n")
             continue
-
 
 
     print(f" \n\nQuestão ({quest})")
@@ -58,34 +48,40 @@ while continuar:
 
     n = n + 1
     dif = n - k
+
     total_dif = list(range(1, dif + 1))
-
-    dif_fatorial = str(total_dif).replace(",", "*")
-    dif_fatorial = "".join(dif_fatorial)
-    dif_produto = functools.reduce(operator.mul, total_dif)
-
     total_n = list(range(1, n + 1))
-
-    n_fatorial_string = str(total_n).replace(",", "*")
-    n_fatorial_string = "".join(n_fatorial_string)
-    n_fatorial = functools.reduce(operator.mul, total_n)
-
     total_k = list(range(1, k + 1))
 
-    k_fatorial_string = str(total_k).replace(",", "*")
-    k_fatorial_string = "".join(k_fatorial_string)
-    k_fatorial = functools.reduce(operator.mul, total_k)
+    def fatorial(arg):
+        replace_fatorial = str(arg).replace(",", "*")
+        nova_lista = "".join(replace_fatorial)
+        return nova_lista
 
-    resultado = n_fatorial / (k_fatorial * (dif_produto))
+    def produtoFatorial(arg):
+        arg_produto = functools.reduce(operator.mul, arg)
+        return arg_produto
+
+
+    dif_fatorial = fatorial(total_dif)
+    dif_produto = produtoFatorial(total_dif)
+
+    n_fatorial = fatorial(total_n)
+    n_produto = produtoFatorial(total_n)
+
+    k_fatorial = fatorial(total_k)
+    k_produto = produtoFatorial(total_k)
+
+    resultado = n_produto / (k_produto * (dif_produto))
 
     print("\nResolução:\n")
 
-    print(f"\nC(n,k)= (n+1)!/(k!*(n-k)!")
+    print(f"\nC(n,k)= (n+1)!/(k!*((n+1)-k)!")
     print(f"\nC(n,k)= {n}!/({k}!*({n}-{k})!)")
     print(
-        f"\n{n_fatorial_string} / ({k_fatorial_string}*{dif_fatorial})")
+        f"\n{n_fatorial} / ({k_fatorial}*{dif_fatorial})")
 
-    print(f"\nC(n,k)= {n_fatorial}/({k_fatorial}*({dif_produto})) = {resultado}")
+    print(f"\nC(n,k)= {n_produto}/({k_produto}*({dif_produto})) = {resultado}")
 
     print(
         f"\n\n Existem {resultado} maneiras possiveis de se organizar esses livros")
@@ -94,11 +90,11 @@ while continuar:
     while novaQuestao:
         resp = input("\n\nDeseja criar outra questão? (Y/N) \n")
 
-        x = resp.upper()
+        escolha = resp.upper()
 
-        if x == "Y":
+        if escolha == "Y":
             novaQuestao = False
-        elif x == "N":
+        elif escolha == "N":
             continuar = False
             novaQuestao = False
         else:
