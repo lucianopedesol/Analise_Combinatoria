@@ -101,7 +101,7 @@ while continuar:
             continue
 
 """
-Retorno >>
+Retorno >> N = 11, K = 5
 
 Questão (1)
 Uma estante de biblioteca tem 16 livros: 11 exemplares o livro "Combinatória é fácil" 
