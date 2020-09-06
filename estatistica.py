@@ -78,8 +78,7 @@ while continuar:
 
     print(f"\nC(n,k)= (n+1)!/(k!*((n+1)-k)!")
     print(f"\nC(n,k)= {n}!/({k}!*({n}-{k})!)")
-    print(
-        f"\n{n_fatorial} / ({k_fatorial}*{dif_fatorial})")
+    print(f"\n{n_fatorial} / ({k_fatorial}*{dif_fatorial})")
 
     print(f"\nC(n,k)= {n_produto}/({k_produto}*({dif_produto})) = {resultado}")
 
